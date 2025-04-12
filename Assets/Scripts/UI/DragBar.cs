@@ -34,9 +34,13 @@ public class DragBar : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragH
     // Update is called once per frame
     void Update()
     {
-        // 插值完事了
-        if (!isOnDrag)
-            mainPanel.offsetMax = Vector2.Lerp(mainPanel.offsetMax, new Vector2(0, -TargetMarginTop), Time.deltaTime * 20f);
+        // 鎻掑�硷紝褰㈡垚鍔ㄧ敾
+        if (!isOnDrag) {
+            // 璺濈瓒冲杩戯紝灏变笉鎻掑�间簡
+            if (Mathf.Abs(mainPanel.offsetMax.y - TargetMarginTop) < 1) 
+                mainPanel.offsetMax = new Vector2(0, TargetMarginTop);
+            else mainPanel.offsetMax = Vector2.Lerp(mainPanel.offsetMax, new Vector2(0, -TargetMarginTop), Time.deltaTime * 20f);
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
