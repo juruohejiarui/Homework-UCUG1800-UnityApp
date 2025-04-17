@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class TabPanel : MonoBehaviour
 {
     public TabBtn[] tabBtns;
-    public TabBtn selectedTabBtn { get => tabBtns[selectedIndex]; }
+    public TabBtn SelectedTabBtn { get => tabBtns[SelectedIndex]; }
 
-    public int selectedIndex;
+    public int SelectedIndex;
 
     public Color SelectedColor = Color.white;
     public Color SelectedIconColor = Color.red;
@@ -19,14 +19,14 @@ public class TabPanel : MonoBehaviour
     // Start is called before the first frame update
 
     public void ChangeSelected(int index) {
-        selectedTabBtn.IsSelected = false;
-        selectedIndex = index;
-        selectedTabBtn.IsSelected = true;
+        SelectedTabBtn.IsSelected = false;
+        SelectedIndex = index;
+        SelectedTabBtn.IsSelected = true;
     }
     void Start()
     {
         tabBtns = GetComponentsInChildren<TabBtn>();
-        selectedIndex = 0;
+        SelectedIndex = 0;
     }
 
     // Update is called once per frame

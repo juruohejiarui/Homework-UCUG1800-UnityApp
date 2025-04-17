@@ -38,8 +38,13 @@ public class TabBtn : MonoBehaviour, IPointerClickHandler
         belong = GetComponentInParent<TabPanel>();
         TabBtn[] btns = belong.GetComponentsInChildren<TabBtn>();
         selfImageComponent = GetComponent<Image>();
-        iconComponent = transform.Find("icon").GetComponent<Image>();
-        textComponent = transform.Find("text").GetComponent<TMP_Text>();
+        if (transform.Find("icon") != null)
+            iconComponent = transform.Find("icon").GetComponent<Image>();
+        else iconComponent = null;
+
+        if (transform.Find("text") != null)
+            textComponent = transform.Find("text").GetComponent<TMP_Text>();
+        else textComponent = null;
         
         IsSelected = btns[0] == this;
     }

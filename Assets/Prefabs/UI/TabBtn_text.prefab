@@ -92,13 +92,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -144,7 +144,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3635220768616721370, guid: b37d06ae7755c6145bab281ea70cb192, type: 3}
       propertyPath: m_Name
-      value: TabBtn Variant
+      value: TabBtn_text
       objectReference: {fileID: 0}
     - target: {fileID: 7460341447089634866, guid: b37d06ae7755c6145bab281ea70cb192, type: 3}
       propertyPath: m_Pivot.x
